@@ -7,15 +7,25 @@
 [![Join the chat](https://badges.gitter.im/Join%20Chat.svg)][1]
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/PaulRBerg/CoinMarketCap-Desktop/blob/master/LICENSE)
 
-A desktop wrapper for the official [CoinMarketCap](https://coinmarketcap.com). Track the cryptocurrency prices and trends with ease!
-The initial codebase was forked from the [Messenger for Desktop](https://github.com/aluxian/Messenger-For-Desktop) project developed by [@aluxian](https://github.com/aluxian).
+A simple desktop wrapper for the [CoinMarketCap](https://coinmarketcap.com). Track your favourite cryptocurrencies much more easily! Not affiliated with the official CoinMarketCap.
+Initial codebase was forked from the [Messenger for Desktop](https://github.com/aluxian/Messenger-For-Desktop) project developed by [@aluxian](https://github.com/aluxian).
 
-## Roadmap :rocket:
+# Roadmap :rocket:
 
-- Add refresh button
+- Refresh button
+- Automatic refresh
 - Ability to set notifications when a specific price is hit
+- Develop the same app for other coin tracking websites, such as CoinGecko
 
-## How to install
+# Donations
+
+Donations welcome if the app helps you. I will return your act of kindness tenfold by further developing tools and projects for the community.
+- Bitcoin: 38fyAV4dReCog38JRA9UaoPfeh9RqrmhHQ
+- Ethereum: 0x7deb85db0D84CFef5a5b9BDeb868Ac4cF269538d
+- Litecoin: LQZ9LqqEiLjMK1DrTCdDKoRndVfpxF74Rt
+- Ripple: rMAEGkK7x1kwKU42z8ephN2RLcV1mVoZLF
+
+# How to install
 
 **Note:** If you download from the [releases page](https://github.com/PaulRBerg/CoinMarketCap-Desktop/releases), be careful what version you pick. Releases that end with `-beta` are beta releases, the ones that end with `-dev` are development releases, and the rest are stable. If you're unsure which to pick, opt for stable. Once you download the app, you'll be able to switch to another channel from the menu.
 
@@ -67,7 +77,7 @@ If you want to help us make *CoinMarketCap Desktop* better, `dev` or `beta` are 
 
 # For Developers
 
-Contributions are welcome! Please help me make *CoinMarketCap Desktop* the best app for cryptocurrency price tracking. For feature requests and bug reports please [submit an issue](https://github.com/PaulRBerg/CoinMarketCap-Desktop/issues/new?labels=bug) or get in touch with me on [Gitter][1] or Twitter [@PaulRBerg](https://twitter.com/PaulRberg).
+Contributions are welcome! Please help me make *CoinMarketCap Desktop* the best app for cryptocurrency tracking. For feature requests and bug reports please [submit an issue](https://github.com/PaulRBerg/CoinMarketCap-Desktop/issues/new?labels=bug) or get in touch with me on [Gitter][1] or Twitter [@PaulRBerg](https://twitter.com/PaulRberg).
 
 ## Build
 
