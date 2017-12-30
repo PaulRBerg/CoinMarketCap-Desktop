@@ -1,0 +1,33 @@
+[
+  {
+    "version": "1.0.1",
+    "channel": "stable",
+    "releasedAt": 1514485144489,
+    "urgency": "low",
+    "changes": {
+      "General": [
+        "Testing Squirrel"
+      ]
+    }
+  },
+  {
+    "version": "1.0.0",
+    "channel": "stable",
+    "releasedAt": 1514480144489,
+    "urgency": "low",
+    "changes": {
+      "General": [
+        "Initial v1 release."
+      ],
+      "OS X": [
+        "Initial v1 release."
+      ],
+      "Windows": [
+        "Initial v1 release."
+      ],
+      "Linux": [
+        "Initial v1 release."
+      ]
+    }
+  }
+]

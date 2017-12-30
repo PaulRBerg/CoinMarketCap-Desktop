@@ -1,0 +1,9 @@
+build/
+cache/
+dist/
+node_modules/
+npm-debug.log
+.env
+.idea
+rootkey.csv
+keys.txt

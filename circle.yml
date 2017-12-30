@@ -1,0 +1,28 @@
+general:
+  branches:
+      only:
+          - staging
+          - deploy
+
+machine:
+  node:
+    version: 7.9.0
+
+dependencies:
+  override:
+    - npm install --only=dev
+  cache_directories:
+    - node_modules
+    - src/node_modules
+    - cache
+
+deployment:
+  staging:
+    branch: staging
+    commands:
+      - ./ciscripts/circleci/build_staging.sh
+  deploy:
+    branch: deploy
+    commands:
+      - ./ciscripts/circleci/build_deploy.sh
+

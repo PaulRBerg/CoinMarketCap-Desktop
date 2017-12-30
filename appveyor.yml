@@ -1,0 +1,54 @@
+clone_depth: 10
+skip_tags: true
+
+branches:
+  only:
+    - staging
+    - deploy
+
+init:
+  - git config --global core.autocrlf input
+
+environment:
+  SIGNTOOL_PATH: 'C:/Program Files (x86)/Microsoft SDKs/Windows/v7.1A/Bin/SignTool.exe'
+  MAKENSIS_PATH: 'C:/Program Files (x86)/NSIS/makensis.exe'
+  SIGN_WIN_CERTIFICATE_FILE: 'C:/foss_ar_sha2.pfx'
+  SIGN_WIN_CERTIFICATE_PASSWORD:
+    secure: cMX//gVqDHsUB1jYXFP+Ig==
+  AWS_ACCESS_KEY_ID:
+    secure: 5q6qXIDnPw6TEJwo9+G/VEG3OVFFWvT1WE5rDkJciWc=
+  AWS_SECRET_ACCESS_KEY:
+    secure: psUQN0jATQEqG8tMpTtkJY5jmPIhs7gCH8o3bSWZbnXvOx4w+YhDMfNEtEabzun6
+  BINTRAY_USER:
+    secure: xI+uacEmfyCmItznY+Qw1w==
+  BINTRAY_API_KEY:
+    secure: dEJ0OCHdmlZON544L5MbxQO99jf0ew5s0yLUJAFSLfXTsgqbQ31GjIjC3fyaKhzK
+  GITHUB_TOKEN:
+    secure: s40d41COIPPCQ/+1aNmTVTVR4aIgiW6ljUzCek6DKsIXHSdeaR0EOI+/WeJqSOct
+  SENTRY_DSN_PRIVATE:
+    secure: WwighpgAZ6nhXPIRXubMHMz4F6usLyaU1b02WDMKHgiNqJ+ZYVj9YhOAd7Zfzey3TbDr9XtlwVPpREBoc4awAA==
+  PIWIK_SERVER_URL:
+    secure: gkBuHg9BGNUG+o6Dgmag2r2JX+PrDZQjBB12r217OlRPsP64xbIrQohvy6lhz8Pro0ZNJDdnQeciiWyVUibZTg==
+  SQUIRREL_UPDATES_URL:
+    secure: Sarp1lt1kECp+/KwmVWfWg7YYv2/+/l2Nho+8x/21kMwGuhN70F0pKO9V4A1MeZsvpdej9jqYhV2crNzYR306A==
+
+cache:
+  - "node_modules -> package.json"
+  - "src\\node_modules -> src\\package.json"
+  - "cache -> src\\package.json"
+  - "%APPDATA%\\npm-cache"
+
+install:
+  - npm install -g npm@3
+  - set PATH=%APPDATA%\npm;%PATH%
+  - npm install -g gulp
+  - npm install
+
+build: off
+
+test_script:
+  - npm test
+
+deploy_script:
+  - if "%APPVEYOR_REPO_BRANCH%" == "staging" ciscripts\appveyor\build_staging.cmd
+  - if "%APPVEYOR_REPO_BRANCH%" == "deploy" ciscripts\appveyor\build_deploy.cmd
