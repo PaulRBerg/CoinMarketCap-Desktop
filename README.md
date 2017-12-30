@@ -7,7 +7,7 @@
 [![Join the chat](https://badges.gitter.im/Join%20Chat.svg)][1]
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/PaulRBerg/CoinMarketCap-Desktop/blob/master/LICENSE)
 
-A simple desktop wrapper for the [CoinMarketCap](https://coinmarketcap.com). Track your favourite cryptocurrencies much more easily! Not affiliated with the official CoinMarketCap.
+A simple desktop wrapper for [CoinMarketCap](https://coinmarketcap.com). Track your favourite cryptocurrencies much more easily! Not affiliated with the official CoinMarketCap.
 Initial codebase was forked from the [Messenger for Desktop](https://github.com/aluxian/Messenger-For-Desktop) project developed by [@aluxian](https://github.com/aluxian).
 
 # Roadmap :rocket:
