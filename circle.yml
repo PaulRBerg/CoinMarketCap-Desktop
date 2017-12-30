@@ -1,8 +1,8 @@
 general:
   branches:
-      exclude:
-          - master
-          - gh-pages
+    exclude:
+      - master
+      - gh-pages
 
 machine:
   node:
