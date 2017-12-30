@@ -1,8 +1,8 @@
 general:
   branches:
-      only:
-          - staging
-          - deploy
+      exclude:
+          - master
+          - gh-pages
 
 machine:
   node:
