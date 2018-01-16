@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.providers {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+
+  /* General */
+  .text {
+    font-family: Lato, sans-serif;
+    font-size: 1rem;
+  }
+
+  a {
+    transition: all .4s;
+
+    &:hover {
+      opacity: .85
+    }
+  }
+
+  /* Specific */
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    background: #6A6A6A;
+
+    h3 {
+      color: white;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      width: 100%;
+
+      a {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+
+        &:hover {
+          background: #f8f8f8;
+        }
+
+        img {
+          width: 48px;
+          height: 48px;
+          margin: .5rem 1rem .5rem .75rem;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      margin-bottom: .5rem;
+      padding: .5rem 1rem;
+      background: #F0AD4E;
+      color: white;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}

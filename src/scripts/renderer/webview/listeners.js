@@ -116,6 +116,21 @@ webView.addEventListener('did-finish-load', function () {
   }, 250);
 });
 
+webView.addEventListener('did-fail-load', function () {
+  log('webview did-fail-load');
+
+  // Hide the loading splash screen
+  const loadingSplashDiv = document.querySelector('.loader');
+  loadingSplashDiv.style.opacity = 0;
+  const noInternetDiv = document.querySelector('.nointernet');
+  noInternetDiv.style.opacity = 1;
+  setTimeout(function () {
+    loadingSplashDiv.style.display = 'none';
+    noInternetDiv.style.display = 'flex';
+  }, 250);
+});
+
+
 // Forward context menu opens
 webView.addEventListener('context-menu', function (event) {
   const paramDefaults = {

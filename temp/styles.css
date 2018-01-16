@@ -1,0 +1,13 @@
+body {
+    height: 100vh;
+}
+
+.notifications {
+    width: 400px;
+    height: 960px;
+}
+
+/*.notifications header {*/
+    /*width: 100%;*/
+    /*height: 100px;*/
+/*}*/

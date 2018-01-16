@@ -35,6 +35,7 @@ export default {
   }, {
     label: 'Toggle &Developer Tools',
     needsWindow: true,
+    accelerator: 'Alt+CmdOrCtrl+I',
     click: $.toggleDevTools()
   }, {
     label: 'Toggle WebView &Dev Tools',

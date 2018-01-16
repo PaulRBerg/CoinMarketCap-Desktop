@@ -1,17 +1,27 @@
 <!doctype html>
 <html>
 <head>
-  <title>{{ productName }}</title>
-  <link rel="stylesheet" href="../styles/app.css">
-  <link rel="stylesheet" href="../styles/loader.css">
+    <title>{{ productName }}</title>
+    <link rel="stylesheet" href="../styles/app.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
 </head>
 <body>
-  <webview id="wv" preload="../scripts/renderer/preload/index.js" allowpopups></webview>
-  <div class="loader">
-    <svg class="spinner-container" viewbox="0 0 44 44">
-      <circle class="path" cx="22" cy="22" r="20" fill="none" stroke-width="4"></circle>
-    </svg>
-  </div>
-  <script src="../scripts/renderer/index.js"></script>
+    <webview id="wv" preload="../scripts/renderer/preload/index.js" allowpopups></webview>
+    <div class="nointernet">
+        <img src="../images/nointernet.png">
+        <h1>No Internet Connection</h1>
+    </div>
+    <div class="loader">
+        <svg class="spinner-container" viewbox="0 0 44 44">
+          <circle class="path" cx="22" cy="22" r="20" fill="none" stroke-width="4"></circle>
+        </svg>
+    </div>
+    <div class="sidebar">
+        <a id="refresh"><img src="../images/icons/refresh.png" alt="Refresh"></a>
+        <a id="providers"><img src="../images/icons/providers.png" alt="Providers"></a>
+        <a id="notifications"><img src="../images/icons/notifications.png" alt="Notifications"></a>
+    </div>
+    <script src="../scripts/renderer/index.js"></script>
 </body>
 </html>

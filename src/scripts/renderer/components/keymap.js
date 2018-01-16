@@ -6,24 +6,6 @@ import webView from 'renderer/webview';
 
 log('binding keyboard shortcuts');
 
-function bindSwitchConversation (keys, direction) {
-  Mousetrap.bind(keys, function () {
-    log(direction, 'conversation');
-    if (direction === 'next') {
-      webView.send('switch-conversation-next');
-    } else {
-      webView.send('switch-conversation-previous');
-    }
-    return false;
-  });
-}
-
-// Previous chat
-bindSwitchConversation(['ctrl+shift+tab'], 'previous');
-
-// Next chat
-bindSwitchConversation(['ctrl+tab'], 'next');
-
 // Close with Esc
 Mousetrap.bind('esc', function () {
   const enabled = prefs.get('close-with-esc');
