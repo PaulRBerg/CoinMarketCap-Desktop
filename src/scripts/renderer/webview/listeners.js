@@ -130,7 +130,6 @@ webView.addEventListener('did-fail-load', function () {
   }, 250);
 });
 
-
 // Forward context menu opens
 webView.addEventListener('context-menu', function (event) {
   const paramDefaults = {

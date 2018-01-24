@@ -1,6 +1,5 @@
-import electron from 'electron'
+import electron from 'electron';
 import fs from 'fs-extra-promise';
-import {app} from 'electron';
 import path from 'path';
 
 import defaults from 'browser/utils/prefs-defaults';

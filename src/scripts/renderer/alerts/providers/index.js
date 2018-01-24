@@ -1,3 +1,3 @@
-import {remote} from 'electron';
+// import {remote} from 'electron';
 
 require('./clicks');

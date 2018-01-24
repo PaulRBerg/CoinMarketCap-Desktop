@@ -1,5 +1,5 @@
 import {app, BrowserWindow, Menu, nativeImage} from 'electron';
-import { blockWindowAds } from 'electron-ad-blocker';
+import {blockWindowAds} from 'electron-ad-blocker';
 import path from 'path';
 import url from 'url';
 import debounce from 'lodash.debounce';

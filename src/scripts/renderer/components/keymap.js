@@ -2,7 +2,6 @@ import {remote} from 'electron';
 import Mousetrap from 'mousetrap';
 
 import prefs from 'common/utils/prefs';
-import webView from 'renderer/webview';
 
 log('binding keyboard shortcuts');
 

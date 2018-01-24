@@ -1,4 +1,4 @@
-import {remote} from 'electron';
+// import {remote} from 'electron';
 
 document.querySelector('#coinmarketcapli').addEventListener('on', (e) => {
 
