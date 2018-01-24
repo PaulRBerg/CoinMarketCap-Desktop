@@ -1,6 +1,6 @@
 general:
   branches:
-    exclude:
+    ignore:
       - master
       - gh-pages
 
