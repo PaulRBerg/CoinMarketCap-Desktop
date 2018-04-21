@@ -56,7 +56,7 @@
   "linux": {
     "genericName": "Cryptocurrency Price Tracker",
     "categories": "Crypto; Finance;",
-    "keywords": "crypto; coin; token; iota; bitcoin; ethereum;",
+    "keywords": "crypto; coin; token; nano; iota; bitcoin; ethereum;",
     "section": "web"
   },
   "license": "MIT",
