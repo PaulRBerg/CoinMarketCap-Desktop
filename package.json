@@ -1,0 +1,48 @@
+{
+  "name": "coinmarketcapwebsite",
+  "version": "1.0.1",
+  "description": "CoinMarketCap Desktop Website",
+  "private": true,
+  "author": "Paul Berg <hello@paulrberg.com>",
+  "license": "CC-BY-NC-ND-4.0",
+  "homepage": "http://www.coinmarketcapdesktop.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaulRBerg/PaulRBerg"
+  },
+  "bugs": {
+    "url": "https://github.com/PaulRBerg/PaulRBerg/issues"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "4.0.0-beta",
+    "devicon": "^2.0.0",
+    "gh-pages": "^1.1.0",
+    "jquery": "^3.2.1",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.1",
+    "npm-watch": "^0.3.0",
+    "popper.js": "^1.12.9",
+    "react": "^16.0.0",
+    "react-burger-menu": "^2.1.6",
+    "react-dom": "^16.0.0",
+    "react-icons": "^2.2.5",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "react-typist": "^2.0.4",
+    "sanitize.css": "^5.0.0",
+    "sass": "^1.0.0-beta.2"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/--watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {}
+}
