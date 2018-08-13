@@ -1,8 +1,8 @@
 # CoinMarketCap Desktop
 
+[![Linux builds](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop/tree/staging.svg?style=shield)](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop)
 [![OS X build](https://travis-ci.org/PaulRBerg/CoinMarketCap-Desktop.svg?branch=staging)](https://travis-ci.org/PaulRBerg/CoinMarketCap-Desktop)
 [![Windows build](https://ci.appveyor.com/api/projects/status/2oar528hietbc77t/branch/staging?svg=true)](https://ci.appveyor.com/project/PaulRBerg/CoinMarketCap-Desktop)
-[![Linux builds](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop/tree/staging.svg?style=shield)](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop)
 [![Join the chat](https://badges.gitter.im/Join%20Chat.svg)][1]
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/PaulRBerg/CoinMarketCap-Desktop/blob/master/LICENSE)
 

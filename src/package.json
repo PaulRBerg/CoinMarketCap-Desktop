@@ -9,6 +9,7 @@
   "dependencies": {
     "app-module-path": "2.2.0",
     "babel-runtime": "6.23.0",
+    "bloom-filter-cpp": "1.1.8",
     "colors": "1.1.2",
     "debug": "2.6.2",
     "del": "2.2.2",
