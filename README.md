@@ -19,6 +19,7 @@ Initial codebase was forked from the [Messenger for Desktop](https://github.com/
 # Donations
 
 Donations welcome if the app helps you. I will return your act of kindness tenfold by further developing tools and projects for the community.
+- Nano: xrb_3j58ptnaugob4gga467dpbmxkjmqn13ykmjwtwdarngkdt8r6em16ayp9q9w
 - Bitcoin: 38fyAV4dReCog38JRA9UaoPfeh9RqrmhHQ
 - Ethereum: 0x7deb85db0D84CFef5a5b9BDeb868Ac4cF269538d
 - Litecoin: LQZ9LqqEiLjMK1DrTCdDKoRndVfpxF74Rt
