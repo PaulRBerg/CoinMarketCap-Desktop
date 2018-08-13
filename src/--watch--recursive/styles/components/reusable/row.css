@@ -1,0 +1,40 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Lato|Montserrat");
+/* Icons */
+@import url("https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css");
+.row {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 200px;
+  margin: 0 2em;
+  text-align: center; }
+  .row h2 {
+    color: #272727;
+    font-size: 2em;
+    line-height: 2em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0; }
+  .row p {
+    color: #C4C4C4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 0;
+    padding-left: 5%;
+    padding-right: 5%; }
+    .row p :before {
+      margin: 0; }
+  .row .space {
+    width: 100px;
+    height: 4px;
+    background-color: #272727;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 1.8em; }

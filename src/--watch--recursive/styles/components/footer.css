@@ -1,0 +1,29 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Lato|Montserrat");
+/* Icons */
+@import url("https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css");
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3em;
+  background-color: #FEFEFE; }
+  footer .copyright {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
+  footer p, footer a {
+    color: #272727;
+    font-family: 'Montserrat-Light', sans-serif; }
+  footer p {
+    font-size: .75em; }
+  footer a {
+    text-decoration: underline; }
+  footer a:hover {
+    opacity: .75; }

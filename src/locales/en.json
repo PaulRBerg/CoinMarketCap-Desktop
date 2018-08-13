@@ -1,0 +1,63 @@
+{
+	"menu": {
+		"home": "Home",
+		"platforms": "Platforms",
+		"downloads": "Downloads",
+        "donations": "Donations",
+        "contact": "Contact"
+	},
+	"contact": {
+      "message": "Versatile entrepreneur and software engineer turned cryptocurrency researcher and smart contract developer. Feel free to drop me a line at"
+	},
+  "springboard": {
+    "title": "CoinMarketCap Desktop",
+    "message": [
+      "A desktop wrapper for the official CoinMarketCap.\nTrack your favourite cryptocurrencies with ease!"
+    ],
+    "download": {
+      "win": "Download for Windows",
+      "mac": "Download for Mac",
+      "lin": "Download for Linux"
+    },
+    "others": "Download for other platforms",
+    "affiliation": "No affiliation with CoinMarketCap."
+  },
+  "platforms": {
+    "title": "Available for Mac, Windows and Linux",
+    "subtitle": "We Wouldn't Miss Your Preferred OS"
+  },
+  "downloads": {
+    "title": "Get CoinMarketCap Desktop",
+    "subtitle": "Just Choose From Below",
+    "parts": [
+      {
+        "title": "Windows",
+        "subtitle": "Download for Windows"
+      },
+      {
+        "title": "Mac",
+        "subtitle": "Download for Mac"
+      },
+      {
+        "title": "Ubuntu",
+        "subtitle": "Download for Ubuntu"
+      },
+      {
+        "title": "Linux",
+        "subtitle": "Fedora, CentOS, Red Hat"
+      }
+    ]
+  },
+    "donations": {
+      "title": "Donations Welcome If The App Helps You",
+      "subtitle": "Will Return Your Act Of Kindness Tenfold By Further Developing Tools And Projects For The Community"
+    },
+	"footer": {
+		"copyright": {
+			"name": "Paul Berg",
+			"year": "2018",
+			"host": "Hosted on",
+			"icons": "Icons from"
+		}
+	}
+}

@@ -1,0 +1,71 @@
+@import 'globals.scss';
+
+/* General */
+body {
+  background: $lightgray;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, a, button, input {
+  color: $lightgray;
+  font-family: Montserrat, sans-serif;
+  white-space: pre-wrap;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  transition: opacity .6s ease;
+
+  &:hover {
+    opacity: .6;
+    text-decoration: none;
+  }
+}
+
+.button {
+  padding: 1rem;
+  border-radius: 4px;
+  background: $darkgray;
+  color: white;
+  font-size: 1.25rem;
+
+  &:hover {
+    color: white;
+  }
+}
+
+/* Bootstrap */
+.container-fluid {
+	padding: 0;
+}
+
+.row {
+	margin: 0;
+}
+
+/* Utils */
+@import 'utils.scss';
+
+/* Components */
+
+/* NavBar */
+@import './components/navbar.scss';
+
+/* Menu */
+@import './components/menu.scss';
+
+/* Main */
+@import './components/main.scss';
+
+/* Springboard */
+@import 'components/sections/springboard.scss';
+
+/* Footer */
+@import './components/footer.scss';
+
+/* Reusable */
+@import './components/reusable/notice.scss';
+@import './components/reusable/poster.scss';

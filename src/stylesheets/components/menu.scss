@@ -1,0 +1,141 @@
+@import '../globals.scss';
+
+/* General sidebar styles */
+.bm-menu-wrap {
+	z-index: 1200 !important;
+
+	nav {
+		margin: 0;
+	}
+
+	p, a {
+		font-family: 'Montserrat-Light', sans-serif;
+	}
+
+	.bm-item-list {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		padding: 0.8em;
+	}
+}
+
+/* Left Menu */
+.bm-menu-wrap-left {
+	background: $darkgray;
+
+	/* Wrapper for item list */
+	.bm-item-list {
+		a {
+			padding: .5em 0;
+			color: $lightgray;
+			font-size: 1.3em;
+			text-transform: uppercase;
+		}
+	}
+}
+
+/* Right Menu */
+.bm-menu-wrap-right {
+	background: $lightgray;
+
+	p {
+		color: $darkgray;
+		font-size: .9em;
+		text-align: center;
+		margin-top: 1em;
+		line-height: 1.5em;
+	}
+
+	a {
+		padding: 0;
+		white-space: normal;
+		text-decoration: underline;
+	}
+
+	.profile-picture {
+		width: 55%;
+		border-radius: 50%;
+		border: .5px solid lightgray;
+	}
+
+	.links-container {
+		display: flex;
+		flex-flow: row nowrap;
+		margin-top: 1em;
+
+		img {
+			width: 42px;
+			height: 42px;
+			border-radius: 8px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.connsuite-badge {
+		margin-top: 1em;
+	}
+}
+
+.bm-menu {
+  padding: 0 0 12em;
+  font-size: 1.15em;
+	overflow: hidden !important;
+}
+
+/* Position and sizing of burger button */
+@mixin bm-burger-button {
+	position: fixed;
+	top: .5em;
+}
+
+.bm-burger-button-left {
+	@include bm-burger-button;
+	width: 1.5em;
+	height: 1.5em;
+	left: .6em;
+}
+
+.bm-burger-button-right {
+	@include bm-burger-button;
+	right: .6em;
+
+	span {
+		color: $darkgray;
+		font-size: 1.3em;
+		font-weight: 900;
+	}
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+/* Color/shape of close button cross */
+.bm-cross-left {
+  background: $lightgray;
+}
+.bm-cross-right {
+  background: $darkgray;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: $lightgray;
+}
+
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

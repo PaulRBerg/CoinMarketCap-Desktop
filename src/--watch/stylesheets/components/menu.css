@@ -1,0 +1,103 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Montserrat");
+/* General sidebar styles */
+.bm-menu-wrap {
+  z-index: 1200 !important; }
+  .bm-menu-wrap nav {
+    margin: 0; }
+  .bm-menu-wrap p, .bm-menu-wrap a {
+    font-family: 'Montserrat-Light', sans-serif; }
+  .bm-menu-wrap .bm-item-list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0.8em; }
+
+/* Left Menu */
+.bm-menu-wrap-left {
+  background: #434343;
+  /* Wrapper for item list */ }
+  .bm-menu-wrap-left .bm-item-list a {
+    padding: .5em 0;
+    color: #FEFEFE;
+    font-size: 1.3em;
+    text-transform: uppercase; }
+
+/* Right Menu */
+.bm-menu-wrap-right {
+  background: #FEFEFE; }
+  .bm-menu-wrap-right p {
+    color: #434343;
+    font-size: .9em;
+    text-align: center;
+    margin-top: 1em;
+    line-height: 1.5em; }
+  .bm-menu-wrap-right a {
+    padding: 0;
+    white-space: normal;
+    text-decoration: underline; }
+  .bm-menu-wrap-right .profile-picture {
+    width: 55%;
+    border-radius: 50%;
+    border: .5px solid lightgray; }
+  .bm-menu-wrap-right .links-container {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 1em; }
+    .bm-menu-wrap-right .links-container img {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px; }
+    .bm-menu-wrap-right .links-container a {
+      text-decoration: none; }
+  .bm-menu-wrap-right .connsuite-badge {
+    margin-top: 1em; }
+
+.bm-menu {
+  padding: 0 0 12em;
+  font-size: 1.15em;
+  overflow: hidden !important; }
+
+/* Position and sizing of burger button */
+.bm-burger-button-left {
+  position: fixed;
+  top: .5em;
+  width: 1.5em;
+  height: 1.5em;
+  left: .6em; }
+
+.bm-burger-button-right {
+  position: fixed;
+  top: .5em;
+  right: .6em; }
+  .bm-burger-button-right span {
+    color: #434343;
+    font-size: 1.3em;
+    font-weight: 900; }
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47; }
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 1.5em;
+  width: 1.5em; }
+
+/* Color/shape of close button cross */
+.bm-cross-left {
+  background: #FEFEFE; }
+
+.bm-cross-right {
+  background: #434343; }
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #FEFEFE; }
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3); }

@@ -1,0 +1,44 @@
+@import '../../globals.scss';
+
+.springboard {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+    margin: 0;
+	min-height: 100vh;
+	background: $lightgray;
+
+  .content-container {
+    padding-bottom: 4rem;
+
+    img {
+      width: 388px;
+      height: 388px;
+    }
+
+    h3, a, p {
+      font-family: 'Montserrat-Light', sans-serif;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 2rem;
+      color: $darkgray;
+      line-height: 1.2rem;
+    }
+
+    a {
+      margin-top: 1.5rem;
+      color: white;
+    }
+
+    p {
+      font-size: .6rem;
+      a {
+        color: $darkgray;
+        font-size: .6rem;
+      }
+    }
+  }
+}

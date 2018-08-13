@@ -1,0 +1,27 @@
+{
+	"urls": {
+		"releases": {
+          "github": "https://github.com/PaulRBerg/CoinMarketCap-Desktop/releases/latest",
+          "mac": "https://github.com/PaulRBerg/CoinMarketCap-Desktop/releases/download/v1.0.0/coinmarketcapdesktop-1.0.0-osx.dmg",
+          "win": "https://github.com/PaulRBerg/CoinMarketCap-Desktop/releases/download/v1.0.0/coinmarketcapdesktop-1.0.0-win32-setup.exe",
+          "ubuntu": "https://github.com/PaulRBerg/CoinMarketCap-Desktop/releases",
+          "linux": "https://github.com/PaulRBerg/CoinMarketCap-Desktop/releases"
+		},
+		"contact": {
+			"twitter": "https://twitter.com/paulrberg",
+			"linkedin": "https://linkedin.com/in/paulrberg",
+			"behance": "https://behance.net/paulrberg",
+			"github": "https://github.com/paulrberg",
+			"medium": "https://medium.com/@paulrberg"
+		}
+	},
+    "wallets": {
+      "btc": "38fyAV4dReCog38JRA9UaoPfeh9RqrmhHQ",
+      "eth": "0x7deb85db0D84CFef5a5b9BDeb868Ac4cF269538d",
+      "ltc": "LQZ9LqqEiLjMK1DrTCdDKoRndVfpxF74Rt",
+      "nano": "xrb_3j58ptnaugob4gga467dpbmxkjmqn13ykmjwtwdarngkdt8r6em16ayp9q9w"
+    },
+	"contact": {
+		"email": "hello@paulrberg.com"
+	}
+}

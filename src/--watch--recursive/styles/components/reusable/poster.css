@@ -1,0 +1,36 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Lato|Montserrat");
+/* Icons */
+@import url("https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css");
+.poster {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .poster .base {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%; }
+  .poster div:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s; }
+  .poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .poster h1 {
+    color: white;
+    font-size: 2.7vw;
+    text-align: center;
+    z-index: 100;
+    margin: 0; }

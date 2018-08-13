@@ -1,0 +1,39 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Lato|Montserrat");
+.springboard {
+  min-height: 100vh;
+  background: #FEFEFE;
+  position: relative; }
+  .springboard .base {
+    display: flex;
+    justify-content: center; }
+    .springboard .base img {
+      width: 88%;
+      height: 88%;
+      object-fit: contain; }
+      @media (max-width: 992px) {
+        .springboard .base img {
+          width: 120%;
+          height: 120%; } }
+      @media (max-width: 768px) {
+        .springboard .base img {
+          width: 160%;
+          height: 160%; } }
+  .springboard .box {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; }
+  .springboard .text {
+    color: #272727;
+    text-align: center;
+    margin: 0;
+    padding-right: 0.4em; }
+  .springboard h1 {
+    font-size: 5.8vw; }
+  .springboard h1, .springboard p {
+    color: red; }

@@ -1,0 +1,38 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Montserrat");
+.poster {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .poster .base {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 480px; }
+  .poster div:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s; }
+  .poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  .poster h1 {
+    color: white;
+    font-size: 2.7vw;
+    text-align: center;
+    z-index: 100;
+    margin: 0; }
+    @media (max-width: 768px) {
+      .poster h1 {
+        font-size: 1.8em; } }

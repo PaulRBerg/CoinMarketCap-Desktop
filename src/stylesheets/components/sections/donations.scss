@@ -1,0 +1,41 @@
+@import '../../globals.scss';
+
+.donations {
+  margin-bottom: 0 !important;
+  padding-bottom: 4rem !important;
+  background: $lightishgray;
+
+  .list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 3rem 0;
+    width: 100%;
+
+    .item {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 150px;
+
+      img {
+        width: 108px;
+        height: 108px;
+      }
+
+      p {
+        margin: .5rem 0 0 0;
+        max-width: 90%;
+        color: $darkgray;
+        font-family: 'Montserrat-Light', sans-serif;
+        font-size: .54rem;
+        font-weight: 300;
+        line-height: 2em;
+        letter-spacing: 1px;
+        text-align: center;
+        word-break: break-all;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Montserrat");
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 4vh;
+  margin: .5em .8em 0; }
+  nav .social-box {
+    display: flex; }
+  nav ul {
+    list-style-type: none;
+    padding: 0; }
+  nav li {
+    display: inline-block; }
+  nav a {
+    padding: 0 4px 0;
+    color: #434343; }
+  nav span {
+    color: #434343;
+    font-size: 1.4em;
+    font-weight: 900; }

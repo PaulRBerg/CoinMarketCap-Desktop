@@ -1,0 +1,13 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Montserrat");
+.hobbies {
+  margin: 0 0 4em; }
+  .hobbies .item {
+    padding: .8em; }
+    .hobbies .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }

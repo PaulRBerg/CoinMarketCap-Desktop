@@ -1,0 +1,42 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Montserrat");
+.achievements {
+  min-height: 360px;
+  margin: 0 0 4em; }
+  .achievements .item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 150px;
+    padding: 0 0 0 3em; }
+    .achievements .item .item-container {
+      display: flex;
+      flex: 1;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      margin: 0 1em;
+      text-align: left; }
+    .achievements .item img {
+      width: 2.5em;
+      height: 2.5em;
+      object-fit: contain;
+      margin-top: .4em; }
+    .achievements .item h3 {
+      color: #434343;
+      font-size: 1.1em;
+      font-weight: 300;
+      line-height: 2em;
+      letter-spacing: 1px;
+      margin: 0; }
+    .achievements .item p, .achievements .item a {
+      color: #7E8385; }
+    .achievements .item p {
+      width: 80%;
+      font-family: 'Montserrat-Light', sans-serif;
+      font-size: .9em;
+      line-height: 1.5;
+      margin-top: .5em; }

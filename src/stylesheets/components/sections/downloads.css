@@ -1,0 +1,35 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Montserrat");
+.downloads {
+  padding-top: 0 !important; }
+  .downloads .list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 3rem 0;
+    width: 100%; }
+    .downloads .list .item {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 150px; }
+      .downloads .list .item i {
+        font-size: 108px; }
+      .downloads .list .item .text {
+        margin: .5rem 0 0 0;
+        font-family: 'Montserrat-Light', sans-serif;
+        text-align: center; }
+      .downloads .list .item h3 {
+        color: #434343;
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 2em;
+        letter-spacing: 1px; }
+      .downloads .list .item a {
+        width: 216px;
+        color: white;
+        font-size: .8rem; }

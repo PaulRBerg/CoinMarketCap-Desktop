@@ -1,0 +1,36 @@
+/* Sizes */
+/* Colors */
+/* Personal */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two|Cabin|Montserrat");
+.notice {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 200px;
+  margin-bottom: 1em;
+  text-align: center; }
+  .notice h2 {
+    color: #434343;
+    font-size: 2em;
+    line-height: 2em;
+    margin: 0; }
+  .notice p {
+    color: #C4C4C4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 0;
+    padding-left: 5%;
+    padding-right: 5%; }
+    .notice p :before {
+      margin: 0; }
+  .notice .space {
+    width: 100px;
+    height: 4px;
+    background-color: #434343;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 1.8em; }

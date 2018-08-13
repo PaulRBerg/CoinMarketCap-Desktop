@@ -1,0 +1,765 @@
+/**
+*
+* Utils
+*
+**/
+
+/*==========  VARIABLES  ==========*/
+
+
+@font-face {
+    font-family: 'camptonbold';
+    src: url('/fonts/campton-bolddemo-webfont.eot');
+    src: url('/fonts/campton-bolddemo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/campton-bolddemo-webfont.woff2') format('woff2'),
+         url('/fonts/campton-bolddemo-webfont.woff') format('woff'),
+         url('/fonts/campton-bolddemo-webfont.ttf') format('truetype'),
+         url('/fonts/campton-bolddemo-webfont.svg#camptonbold_demo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'camptonlight';
+    src: url('/fonts/campton-lightdemo-webfont.eot');
+    src: url('/fonts/campton-lightdemo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/campton-lightdemo-webfont.woff2') format('woff2'),
+         url('/fonts/campton-lightdemo-webfont.woff') format('woff'),
+         url('/fonts/campton-lightdemo-webfont.ttf') format('truetype'),
+         url('/fonts/campton-lightdemo-webfont.svg#camptonlight_demo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+  // Defining breakpoints
+  $medium: 620px !default;
+  $wide: 800px !default;
+  $huge: 1600px !default;
+  $mediumContainer: 688px !default;
+  $wideContainer: 864px !default;
+
+  // Defining grid sizes
+  $mediumColCount: 3 !default;
+  $mediumColWidth: 30.3% !default;
+  $mediumGutterWidth: 4.5% !default;
+  $wideColCount: 4 !default;
+  $wideColWidth: 22.2% !default;
+  $wideGutterWidth: 3.7% !default;
+
+  // Defining colors
+  $colorBlue: #3372df !default;
+  $colorBlueSecondary: lighten($colorBlue, 30%) !default;
+  $colorGreen: #0f9d58 !default;
+  $colorGreenSecondary: lighten($colorGreen, 30%) !default;
+  $colorRed: #cb4437 !default;
+  $colorRedSecondary: lighten($colorRed, 30%) !default;
+  $colorYellow: #f4b400 !default;
+  $colorYellowSecondary: lighten($colorYellow, 20%) !default;
+
+  $colorRemember: #09829a !default;
+  $colorLearning: #da2e75 !default;
+
+  $colorGrayBackground: #f0f0f0 !default;
+  $colorGrayKeyline: #e0e0e0 !default;
+  $colorGray: #737373 !default;
+  $colorGrayLight: #eeeeee !default;
+  $colorGrayDark: #404040 !default;
+
+  $colorText: $colorGrayDark !default;
+  $colorHighlight: $colorBlue !default;
+  $colorWarning: $colorYellowSecondary !default;
+  $colorMuted: $colorGray !default;
+  $colorDanger: $colorRed !default;
+
+  $colorLayouts: #297ea9 !default;
+  $colorLayoutsSecondary: lighten($colorLayouts, 30%) !default;
+  $colorUser: #2c8566 !default;
+  $colorUserSecondary: lighten($colorUser, 30%) !default;
+  $colorMedia: #cf423a !default;
+  $colorMediaSecondary: lighten($colorMedia, 30%) !default;
+  $colorPerformance: #7b5294 !default;
+  $colorPerformanceSecondary: lighten($colorPerformance, 30%) !default;
+
+  // Defining font family
+  $fontDefault: "camptonlight", Helvetica, sans-serif !default;
+  $fontHighlight: "camptonlight", Helvetica, sans-serif !default;
+  $fontIcon: "icons" !default;
+
+  // Defining font sizes
+  $fontSmall: 13px !default;
+  $fontBase: 16px  !default;
+  $fontMedium: 20px !default;
+  $fontLarge: 26px !default;
+  $fontXLarge: 42px !default;
+  $fontXXLarge: 68px !default;
+  $fontHuge: 110px !default;
+
+  // Defining baseline line height
+  $lineHeight: 26px !default;
+
+  // Defining animation easings
+  $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
+
+  // Defining sidebar stuff
+  $sidebarWidth: 280px !default;
+
+  $black: #111;
+  $white: #fff;
+  $box-shadow-inset: 0 0 0 3px rgba(255,255,255,0),0 0 0 4px rgba(214,214,214,0),inset 0 2px 2px 0 rgba(0,0,0,.2);
+  $box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.12);
+  $box-shadow-light: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 1px rgba(0, 0, 0, 0.06);
+  $box-shadow-bold: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  $box-shadow-popup-semi: 0 8px 19px rgba(0,0,0,0.30), 0 7px 6px rgba(0,0,0,0.22);
+  $box-shadow-popup: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  $border-radius: 2px;
+  $transition-out: cubic-bezier(.55,0,.1,1);
+
+
+
+/*==========  FUNCTIONS  ==========*/
+
+  @function leading($size, $context: $lineHeight) {
+    @return  $context / $size + em;
+  }
+
+
+/*==========  MIXINS  ==========*/
+
+  @mixin prefixr($property, $value...) {
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+            #{$property}: $value;
+  }
+
+  @mixin media-query($media-query) {
+    @if $media-query == small {
+      @media only screen and (max-width:$medium - 1) { @content; }
+    }
+
+    @if $media-query == medium {
+      @media only screen and (min-width:$medium) { @content; }
+    }
+
+    @if $media-query == medium-only {
+      @media only screen and (min-width:$medium) and (max-width: $wide - 1) { @content; }
+    }
+
+    @if $media-query == wide {
+      @media only screen and (min-width:$wide) { @content; }
+    }
+
+    @if $media-query == huge {
+      @media only screen and (min-width:$huge) { @content; }
+    }
+  }
+
+  // Just some helpers...
+  @mixin small-only { @include media-query(small) { @content }; }
+  @mixin medium { @include media-query(medium) { @content }; }
+  @mixin medium-only { @include media-query(medium-only) { @content }; }
+  @mixin wide { @include media-query(wide) { @content }; }
+  @mixin huge { @include media-query(huge) { @content }; }
+
+
+  @mixin keyframes($animation-name){
+    @-webkit-keyframes $animation-name{
+      @content;
+    }
+
+    @-moz-keyframes $animation-name{
+      @content;
+    }
+
+    @-ms-keyframes $animation-name{
+      @content;
+    }
+
+    @keyframes $animation-name{
+      @content;
+    }
+  }
+
+  // Mixin to constrain elements
+  @mixin container($isRelative: false) {
+    @include prefixr(box-sizing, border-box);
+
+    @if $isRelative {
+      position: relative;
+    }
+
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    @include medium {
+      padding-left: 4.8%;
+      padding-right: 4.8%;
+      max-width: $mediumContainer;
+    }
+
+    @include wide {
+      padding-left: 4.4%;
+      padding-right: 4.4%;
+      max-width: $wideContainer;
+    }
+  }
+  // Mixin to constrain elements
+  @mixin containerAbsolute($isRelative: false) {
+    @include prefixr(box-sizing, content-box);
+    position: absolute;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    @include medium {
+      padding-left: 4.8%;
+      padding-right: 4.8%;
+      max-width: $mediumContainer;
+    }
+
+    @include wide {
+      padding-left: 4.4%;
+      padding-right: 4.4%;
+      max-width: $wideContainer;
+    }
+  }
+
+
+
+  // Mixin to show a baseline grid
+  // only visible when body has 'debug' class
+  @mixin baseline-grid() {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      z-index: 9;
+
+      display: none;
+      background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.15)));
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.15) 100%);
+      background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.15) 100%);
+      background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.15) 100%);
+      background-image: linear-gradient(top, rgba(0,0,0,0.15) 95%,rgba(0,0,0,0.15) 100%);
+
+      @include prefixr(background-size, 100% 26px);
+    }
+
+    &.debug::after {
+      display: block;
+      pointer-events: none;
+    }
+  }
+
+  // Mixins simply to store CSS rules
+  @mixin rule--small {
+    font-size: $fontSmall;
+    line-height: 2.0000em; /* 26px */
+    padding-top: 2.0000em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--base {
+    font-size: $fontBase;
+    line-height: 1.6250em; /* 26px */
+    padding-top: 1.6250em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--medium {
+    font-size: $fontMedium;
+    font-weight: 300;
+    line-height: 1.3000em; /* 26px */
+    padding-top: 1.3000em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--large {
+    font-family: $fontHighlight;
+    font-size: $fontLarge;
+    font-weight: 300;
+    line-height: 1.0000em; /* 26px */
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--xlarge {
+    font-family: $fontHighlight;
+    font-size: $fontXLarge;
+    font-weight: 300;
+    line-height: 1.2381em; /* 52px */
+    padding-top: 0.6190em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--xxlarge {
+    font-family: $fontHighlight;
+    font-size: $fontXXLarge;
+    font-weight: 300;
+    line-height: 1.1471em; /* 78px */
+    padding-top: 0.3824em;
+    padding-bottom: 0;
+  }
+
+  @mixin rule--huge {
+    font-family: $fontHighlight;
+    font-size: $fontHuge;
+    font-weight: 300;
+    line-height: 1.19em; /* 130px */
+    padding-top: 0.2364em;
+    padding-bottom: 0;
+  }
+
+
+
+  // Mixins to determine which rule to use at which breakpoint
+  @mixin type--small($isFromMixin: false) {
+    @include rule--small;
+  }
+
+  @mixin type--base($isFromMixin: false) {
+    @include rule--base;
+  }
+
+  @mixin type--medium($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--base(true);
+      @include wide {
+        @include rule--medium;
+      }
+    }
+    @else {
+      @include rule--medium;
+    }
+  }
+
+  @mixin type--large($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--medium(true);
+      @include wide {
+        @include rule--large;
+      }
+    }
+    @else {
+      @include rule--large;
+    }
+  }
+
+  @mixin type--xlarge($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--large(true);
+      @include wide {
+        @include rule--xlarge;
+      }
+    }
+    @else {
+      @include rule--xlarge;
+    }
+  }
+
+  @mixin type--xxlarge($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--xlarge(true);
+      @include wide {
+        @include rule--xxlarge;
+      }
+    }
+    @else {
+      @include rule--xxlarge;
+    }
+  }
+
+  @mixin type--huge($isFromMixin: false) {
+    @if $isFromMixin == false {
+      @include type--xxlarge(true);
+      @include wide {
+        @include rule--huge;
+      }
+    }
+    @else {
+      @include rule--huge;
+    }
+  }
+
+
+  // LISTS
+  @mixin bullet-type($bullet, $icon: false) {
+    &::before {
+      @if $icon {
+        font-family: $fontIcon;
+        font-size: $fontSmall;
+      }
+      @else {
+        content: $bullet;
+        font-family: $fontHighlight;
+      }
+
+      display: block;
+      font-weight: 400;
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: $lineHeight;
+
+    }
+  }
+
+  @mixin numbered-list() {
+    &::before {
+      counter-increment: list;
+      content: "0" counter(list);
+      color: inherit;
+      font-weight: 400;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  // Mixin to create links
+  @mixin style-cta($textColor, $linkIcon: false) {
+    font-family: $fontHighlight;
+    color: $textColor;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 1;
+
+    &:hover {
+      color: $colorGrayDark;
+    }
+
+    @if $linkIcon {
+      text-decoration: none;
+      &::before {
+        display: inline-block;
+        padding-right: 10px;
+        font-family: $fontIcon;
+        line-height: ($lineHeight) - 1; // remove 1px from line-height to fix baseline alignment
+        font-size: $fontSmall;
+        content: $linkIcon;
+      }
+    }
+  }
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+  // Mixin to create highlight modules
+  @mixin highlight-symbol($verticalOffset: 0, $horizontalOffset: 45px, $fontSize: 130px) {
+    position: relative;
+
+    &::before {
+      display: none;
+
+      @include medium {
+        display: block;
+        position: absolute;
+        top: 106px;
+        right: $horizontalOffset;
+        font-size: $fontSize;
+        line-height: 1px;
+        text-align: center;
+        height: 100%;
+        width: $mediumColWidth;
+        color: #ffffff;
+        content:attr(icon);
+      }
+
+      .highlight-module--left & {
+        right: auto;
+        left: $horizontalOffset;
+      }
+
+      @include wide {
+        top: 134px;
+        width: $wideColWidth;
+        font-size: $fontSize + 50;
+
+        .highlight-module--large & {
+          font-size: $fontSize + 300;
+        }
+      }
+    }
+  }
+
+  // Grid CSS rules
+  @mixin rule--col($mediaQuery) {
+    @if $mediaQuery == medium {
+      float: left;
+      margin-right: $mediumGutterWidth;
+    }
+
+    @if $mediaQuery == wide {
+      float: left;
+      margin-right: $wideGutterWidth;
+    }
+  }
+
+  // Mixin for flexbox
+  @mixin flexbox {
+    display: -moz-box;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+
+
+  @mixin border-gradient($from, $to, $width) {
+    border-left: $width solid $from;
+    border-right: $width solid $to;
+    background-image: linear-gradient(90deg, #4e72c7 0%, #6d9ed7 34%, #a4c8d5 67%, #b4d9e1 84%, #c4d9d6 100%);
+    // 100% left & right, $width px top & bottom
+    background-size: 100% $width;
+    background-position: 0 100%, 0 0;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+  }
+
+
+$bg-color:#000;
+$fade-speed: 1s;
+
+.better-fade {
+  animation: fade $fade-speed forwards;
+  animation-iteration-count: 1;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  transform: translateZ(0);
+
+  &::after {
+    animation: fade-gradient $fade-speed forwards;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in-out;
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: #111;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-gradient {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+  // duration     Specifies how many seconds or milliseconds an animation takes to complete one cycle. Default 0
+  //
+  // delay        Specifies when the animation will start. Default 0
+  //
+  // function     Describes how the animation will progress over one cycle of its duration. Default "ease"
+  //
+  // count        Specifies the number of times an animation is played. Default 1
+  //
+  // fill-mode    Specifies if the effects of an animation are before the animation starts and after it ends.
+  //
+  // visibility   Determines whether or not a transformed element is visible when it is not facing the screen.
+
+  $countDefault: 1 !default;
+  $durationDefault: 1s !default;
+  $delayDefault: 0s !default;
+  $functionDefault: ease !default;
+  $fillDefault: both;
+  $visibilityDefault: hidden !default;
+
+  @mixin count($count: 1) {
+    -webkit-animation-iteration-count: $count;
+       -moz-animation-iteration-count: $count;
+        -ms-animation-iteration-count: $count;
+         -o-animation-iteration-count: $count;
+            animation-iteration-count: $count;
+  }
+
+  @mixin duration($duration: 1s) {
+    -webkit-animation-duration: $duration;
+       -moz-animation-duration: $duration;
+        -ms-animation-duration: $duration;
+         -o-animation-duration: $duration;
+            animation-duration: $duration;
+  }
+
+  @mixin delay($delay: .2s) {
+    -webkit-animation-delay: $delay;
+       -moz-animation-delay: $delay;
+        -ms-animation-delay: $delay;
+         -o-animation-delay: $delay;
+            animation-delay: $delay;
+  }
+
+  @mixin function($function: ease) {
+    -webkit-animation-timing-function: $function;
+       -moz-animation-timing-function: $function;
+        -ms-animation-timing-function: $function;
+         -o-animation-timing-function: $function;
+            animation-timing-function: $function;
+  }
+
+  @mixin fill-mode($fill: both) {
+    -webkit-animation-fill-mode: $fill;
+       -moz-animation-fill-mode: $fill;
+        -ms-animation-fill-mode: $fill;
+         -o-animation-fill-mode: $fill;
+            animation-fill-mode: $fill;
+  }
+
+  @mixin visibility($visibility: hidden) {
+    -webkit-backface-visibility: $visibility;
+       -moz-backface-visibility: $visibility;
+        -ms-backface-visibility: $visibility;
+         -o-backface-visibility: $visibility;
+            backface-visibility: $visibility;
+  }
+
+  @mixin transform($property) {
+    -webkit-transform: $property;
+       -moz-transform: $property;
+        -ms-transform: $property;
+         -o-transform: $property;
+            transform: $property;
+  }
+
+  @mixin transform-origin($transform-origin: center center) {
+    -webkit-transform-origin: $transform-origin;
+       -moz-transform-origin: $transform-origin;
+        -ms-transform-origin: $transform-origin;
+         -o-transform-origin: $transform-origin;
+            transform-origin: $transform-origin;
+  }
+
+  @mixin transform-style($transform-style: flat) {
+    -webkit-transform-style: $transform-style;
+       -moz-transform-style: $transform-style;
+         -o-transform-style: $transform-style;
+            transform-style: $transform-style;
+  }
+
+  @mixin animation-name($animation-name) {
+    -webkit-animation-name: $animation-name;
+       -moz-animation-name: $animation-name;
+        -ms-animation-name: $animation-name;
+         -o-animation-name: $animation-name;
+            animation-name: $animation-name;
+  }
+
+  @mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }
+
+    @-ms-keyframes #{$animation-name} {
+      @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+      @content;
+    }
+
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+
+  @include keyframes(fadeInUp) {
+    0% {
+      opacity: 0;
+      @include transform(translateY(20px));}
+    100% {
+      opacity: 1;
+      @include transform(translateY(0));
+    }
+  }
+  /* @include fadeInUp(
+    $duration: 1s,
+    $count: 2,
+    $delay: .2s,
+    $function: ease,
+    $fill: both
+  );*/
+
+.perfect-center {
+
+  @include wide {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  @include medium {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+.responsive--vertical-center {
+  @include small-only {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+  @mixin fadeInUp($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+    @include animation-name(fadeInUp);
+    @include count($count);
+    @include duration($duration);
+    @include delay($delay);
+    @include function($function);
+    @include fill-mode($fill);
+    @include visibility($visibility);
+  }
