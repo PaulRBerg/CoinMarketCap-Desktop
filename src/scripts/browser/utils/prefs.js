@@ -1,5 +1,5 @@
+import electron from 'electron';
 import fs from 'fs-extra-promise';
-import {app} from 'electron';
 import path from 'path';
 
 import defaults from 'browser/utils/prefs-defaults';
@@ -9,7 +9,12 @@ let data = null;
 
 function ensureDataLoaded () {
   if (!prefsPath) {
-    prefsPath = path.join(app.getPath('userData'), 'prefs.json');
+    // Renderer process has to get `app` module via `remote`, whereas the main process can get it directly
+    // app.getPath('userData') will return a string of the user's app data directory path.
+    const userDataPath = (electron.app || electron.remote.app).getPath('userData');
+
+    // We'll use the `prefs.json` property to set the file name and path.join to bring it all together as a string
+    prefsPath = path.join(userDataPath, 'prefs.json');
   }
 
   if (!data) {

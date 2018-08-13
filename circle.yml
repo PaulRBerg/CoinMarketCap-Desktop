@@ -6,7 +6,7 @@ general:
 
 machine:
   node:
-    version: 7.9.0
+    version: 5.5.0
 
 dependencies:
   override:

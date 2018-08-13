@@ -1,5 +1,28 @@
 [
   {
+    "version": "1.1.0",
+    "channel": "stable",
+    "releasedAt": 1516819691289,
+    "urgency": "low",
+    "changes": {
+      "General": [
+        "Ads removed",
+        "Sidebar with refresh button added"
+      ]
+    }
+  },
+  {
+    "version": "1.0.1",
+    "channel": "stable",
+    "releasedAt": 1514485144489,
+    "urgency": "low",
+    "changes": {
+      "General": [
+        "Testing Squirrel"
+      ]
+    }
+  },
+  {
     "version": "1.0.0",
     "channel": "stable",
     "releasedAt": 1514480144489,

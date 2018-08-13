@@ -1,4 +1,5 @@
 import {app, BrowserWindow, Menu, nativeImage} from 'electron';
+import {blockWindowAds} from 'electron-ad-blocker';
 import path from 'path';
 import url from 'url';
 import debounce from 'lodash.debounce';
@@ -94,7 +95,9 @@ class MainWindowManager extends EventEmitter {
       pathname: path.join(__dirname, '..', '..', '..', 'html', 'app.html'),
       protocol: 'file:'
     }));
-    // this.window.loadURL(global.manifest.virtualUrl);
+
+    // Block ads
+    blockWindowAds(this.window, {});
   }
 
   /**

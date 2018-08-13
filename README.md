@@ -1,8 +1,8 @@
 # CoinMarketCap Desktop
 
+[![Linux builds](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop/tree/staging.svg?style=shield)](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop)
 [![OS X build](https://travis-ci.org/PaulRBerg/CoinMarketCap-Desktop.svg?branch=staging)](https://travis-ci.org/PaulRBerg/CoinMarketCap-Desktop)
 [![Windows build](https://ci.appveyor.com/api/projects/status/2oar528hietbc77t/branch/staging?svg=true)](https://ci.appveyor.com/project/PaulRBerg/CoinMarketCap-Desktop)
-[![Linux builds](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop/tree/staging.svg?style=shield)](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop)
 [![Join the chat](https://badges.gitter.im/Join%20Chat.svg)][1]
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/PaulRBerg/CoinMarketCap-Desktop/blob/master/LICENSE)
 
@@ -11,10 +11,10 @@ Initial codebase was forked from the [Messenger for Desktop](https://github.com/
 
 # Roadmap :rocket:
 
-- Refresh button
-- Automatic refresh
-- Ability to set notifications when a specific price is hit
-- Develop the same app for other coin tracking websites, such as CoinGecko
+- [x] Ads removed
+- [x] Refresh Button
+- [ ] Develop the same app for other coin tracking websites, such as CoinGecko
+- [ ] Ability to set notifications when a specific price is hit
 
 # Donations
 
@@ -22,7 +22,6 @@ Donations welcome if the app helps you. I will return your act of kindness tenfo
 - Bitcoin: 38fyAV4dReCog38JRA9UaoPfeh9RqrmhHQ
 - Ethereum: 0x7deb85db0D84CFef5a5b9BDeb868Ac4cF269538d
 - Litecoin: LQZ9LqqEiLjMK1DrTCdDKoRndVfpxF74Rt
-- Ripple: rMAEGkK7x1kwKU42z8ephN2RLcV1mVoZLF
 
 # How to install
 

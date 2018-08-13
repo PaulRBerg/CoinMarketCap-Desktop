@@ -5,32 +5,36 @@ import platform from 'common/utils/platform';
 
 let availableLanguages = null;
 const defaults = {
+  'accept-first-mouse': false,
   'analytics-track': true,
   'analytics-uid': null,
+  'auto-hide-menubar': false,
+  'close-with-esc': false,
   'launch-startup': false,
   'launch-startup-hidden': true,
   'launch-quit': false,
   'links-in-browser': true,
-  'block-seen-typing': false,
-  'close-with-esc': false,
   'quit-behaviour-taught': false,
   'notify-app-updated': false,
   'show-notifications-badge': true,
   'show-tray': platform.isWindows,
   'show-dock': true,
-  'auto-hide-menubar': false,
   'sidebar-auto-hide': false,
   'spell-checker-check': false,
   'spell-checker-auto-correct': false,
   'spell-checker-language': defaultSpellCheckerLanguage,
   'updates-auto-check': true,
   'updates-channel': global.manifest.versionChannel,
+  'vwUrl': 'https://coinmarketcap.com',
   'window-bounds': {
     width: 1280,
     height: 800
   },
+  'window-popup-bounds': {
+    width: 480,
+    height: 360
+  },
   'window-full-screen': false,
-  'accept-first-mouse': false,
   'zoom-level': 0
 };
 
