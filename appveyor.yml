@@ -30,7 +30,7 @@ environment:
   PIWIK_SERVER_URL:
     secure: gkBuHg9BGNUG+o6Dgmag2r2JX+PrDZQjBB12r217OlRPsP64xbIrQohvy6lhz8Pro0ZNJDdnQeciiWyVUibZTg==
   SQUIRREL_UPDATES_URL:
-    secure: Sarp1lt1kECp+/KwmVWfWg7YYv2/+/l2Nho+8x/21kMwGuhN70F0pKO9V4A1MeZsvpdej9jqYhV2crNzYR306A==
+    secure: 9KCavZmqwcCifbRuEB32Uh+xK0Sp+IemIrdjhjW3nGKmnquamKudRV/r5riLGyiUgmzhywWvf5qskk6GU6+0PfL0sAE9XgHl0WkqvHSxoGI=
 
 cache:
   - "node_modules -> package.json"
