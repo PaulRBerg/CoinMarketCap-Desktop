@@ -16,9 +16,9 @@ environment:
   SIGN_WIN_CERTIFICATE_PASSWORD:
     secure: cMX//gVqDHsUB1jYXFP+Ig==
   AWS_ACCESS_KEY_ID:
-    secure: 5q6qXIDnPw6TEJwo9+G/VEG3OVFFWvT1WE5rDkJciWc=
+    secure: U2XyTQ9VcIotBID80ofmfJ5B0anyRoeeoJE5FyxA5bs=
   AWS_SECRET_ACCESS_KEY:
-    secure: psUQN0jATQEqG8tMpTtkJY5jmPIhs7gCH8o3bSWZbnXvOx4w+YhDMfNEtEabzun6
+    secure: sr0q66XKK/EGVRVFp5oOCbetaKjdWj8EvxYGa1XJQOTnNvVkhFkVz1cRf/Utvnl4
   BINTRAY_USER:
     secure: xI+uacEmfyCmItznY+Qw1w==
   BINTRAY_API_KEY:
