@@ -34,14 +34,12 @@
     "sass": "^1.0.0-beta.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/--watch --recursive",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "NODE_PATH=src/ && npm-run-all -p watch-css start-js",
+    "build": "NODE_PATH=src/ && npm run build-css && react-scripts build",
+    "test": "NODE_PATH=src/ &&react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {}
