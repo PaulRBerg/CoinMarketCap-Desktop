@@ -1,4 +1,7 @@
+
 # CoinMarketCap Desktop
+
+### Warning: Not maintaned anymore. If you're looking for an alternative, check out CoinMarketCap's official [widget](https://coinmarketcap.com/widget/).
 
 [![Linux builds](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop/tree/staging.svg?style=shield)](https://circleci.com/gh/PaulRBerg/CoinMarketCap-Desktop)
 [![OS X build](https://travis-ci.org/PaulRBerg/CoinMarketCap-Desktop.svg?branch=staging)](https://travis-ci.org/PaulRBerg/CoinMarketCap-Desktop)
